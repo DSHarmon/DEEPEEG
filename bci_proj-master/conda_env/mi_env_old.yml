@@ -1,0 +1,24 @@
+name: mi_env
+channels:
+- conda-forge
+- defaults
+dependencies:
+- python=3.8
+- psychopy
+- pyqtgraph
+- matplotlib
+- scikit-learn
+- pandas
+- pip
+- pip:
+  - psychtoolbox
+  - pygame
+  - pyo
+  - pyparallel; platform_system != "Windows"
+  - SoundFile; platform_system == "Windows"
+  - websocket_client
+  - mne
+  - pylsl
+  - pyEDFlib
+#  - Cython
+#  - pymrmr

@@ -1,0 +1,20 @@
+1. 下载3个东西：anaconda官网下载anaconda, sublimetext官网下载sublimetext，码云下载tuanergou项目
+2. 安装anaconda。选项全部默认。
+3. 打开anaconda promt
+4. 输入 conda update -n base conda -y 回车后等半小时
+5. 输入 conda install -n base conda-libmamba-solver 回车后等5分钟
+6. conda config --set solver libmamba 回车
+7. 将tuanergou项目中：conda_env/mi_env.yaml放在用户名文件夹下，如：C:\Users\tuan\
+8. conda env create -n bci_env -f mi_env.yaml
+9. 安装sublimeText。选项全部默认。
+10. 打开sublimeText : Tool->Build System-> New Build System
+11. 将那一句话替换为:
+"shell_cmd": "CALL C:\\Users\\tuan\\AppData\\Local\\anaconda3\\Scripts\\activate.bat C:\\Users\\tuan\\AppData\\Local\\anaconda3 && CALL conda.bat activate bci_env && python -u \"$file\""
+注意：这里将C:\\Users\\tuan\\AppData\\Local\\anaconda3这部分替换成你自己的电脑上anaconda的路径
+12. 保存在C:\Users\tuan\AppData\Roaming\Sublime Text\Packages\User （一般为默认路径）下面，起个名字，比如“bci_env”
+13. 打开sublimeText，Tool->Build System->bci_env（就是刚才保存的那个）
+14. Tool->Build 或 ctrl+B
+
+
+
+
